@@ -50,16 +50,19 @@ content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=
 }
 
 div:first-child p:nth-child(n+4) {
+  /*  why n+4 => task: начиная со второго */
 background-color: var(--color_1);
 }
 
 div p[class="active"] + h2 {
+  /*  for class better use "." invocation: div p.active + h2*/
 background-color: var(--color_2);
 }
 div span ~ h2 {
 background-color: var(--color_3);
 }
 div + h2 {
+/* Выделить <h2>, который находится на одному уровне с <div> => тут имееться в виду не только те которые стоят сразу после а на одном уровне жто другой селектор */
 background-color: var(--color_4);
 }
 

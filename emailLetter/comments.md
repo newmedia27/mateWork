@@ -13,3 +13,8 @@
 ### Center:
 - Information about seller and buyer: the left td should be more wide, add more padding to right column
 - 300$ - should not be bold
+
+### Comments after prev completed:
+- Footer should also have grey border
+- 300$? Why it's blue or have this color - it should be black
+- Social icons have too much space on the top and to far from footer

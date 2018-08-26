@@ -64,9 +64,11 @@
 
     }
     a[class='www link']{
+        /* with link or visited state – here should be calss: "www" and using pseudo-classes set states :link and :visited */
         background-color: var(--color_6);
     }
     a:not([class='www']){
+        /* better use this construction: a:not(.www) */
         background-color: var(--color_7);
     }
     a:hover{
@@ -79,6 +81,7 @@
         border: 1px solid blue;
     }
     input[required]{
+        /* can also be done by pseudo class :required*/
         background-color: #efefef
     }
 

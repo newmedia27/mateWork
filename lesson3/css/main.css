@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Gabriela');
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +11,12 @@ body {
 }
 
 .wrapper {
-    max-width: 700px;
+    max-width: 690px;
     width: 100%;
     margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    /*border: 1px solid black;*/
 }
 
 .header {
@@ -35,11 +39,14 @@ body {
     height: 60px;
     float: left;
     margin-top: 2px;
+    margin-left: 5px;
+
 }
 
 ul {
     float: right;
     margin-right: 40px;
+    margin-right: 5px;
 }
 
 ul li {
@@ -78,18 +85,84 @@ ul li a {
     font-weight: bold;
 }
 .row{
-    border: 1px solid black;
-    padding: 5px;
+    /*border: 1px solid black;*/
 }
 .first{
     margin-top: 53px;
 }
 .first > .coll{
-    border: 1px solid red;
     float: left;
-    width: calc(100%/3 - 73px);
-    /*margin-left: 63px;*/
+    width: calc((100% - 150px)/3);
+    margin-left: 60px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 5px;
 }
 .first > .coll:first-child{
     margin-left: 0;
+}
+.coll>h2{
+    color: #333333;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.btn{
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+    width: 100%;
+    background-color: #fe470f;
+    margin-top: 17px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.second{
+    margin-top: 60px;
+}
+.second>.coll{
+    /*border: 1px solid red;*/
+    float: left;
+    width: calc((100% - 20px)/2);
+    text-align: justify;
+}
+.second>.coll:first-child{
+    margin-right: 16px;
+}
+.coll>p{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold
+}
+.footer{
+    position: relative;
+    margin-top: 146px;
+    background-color: #ff5c33;
+    color: #fff;
+    padding-top: 13px;
+    padding-bottom: 9px;
+}
+.footer-content{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.footer-content > span{
+    font-size: 21px;
+    font-weight: 400;
+    float: left;
+
+}
+.footer-content > span:last-child{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    float: right;
+    margin-right: 40px;
+}
+.arrow{
+    position: fixed;
+    right: 19px;
+    bottom: 70px;
 }

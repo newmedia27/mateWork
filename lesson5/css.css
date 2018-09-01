@@ -1,0 +1,164 @@
+.block {
+    margin-bottom: 10px;
+}
+
+.block > div:not(.clearfix) {
+    background: #00BCD4;
+    border: 1px solid #fff;
+    height: 150px;
+    color: #fff;
+    display: block;
+    width: 100%;
+}
+
+.clearfix {
+    width: 100%;
+    float: none;
+    position: relative;
+}
+
+.clearfix:after {
+    height: 1px;
+    width: 100%;
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.inside {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+}
+
+/*- large desktop: 1800px*/
+/*- medium desktop: 1200px*/
+/*- Tablet Landscape: 960px*/
+/*- Tabled Portrait: 768px*/
+/*- mobile: 320px*/
+
+@media (min-device-width: 320px) and (max-device-width: 768px) {
+    div.first > .colored, div.two > .colored {
+        float: left;
+        width: calc(50% - 2px);
+
+    }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 959px) {
+    div.first > .colored, div.two > .colored {
+        float: left;
+        width: calc(50% - 2px);
+
+    }
+
+    div.four > .colored, div.fifth > .colored {
+        float: left;
+        width: calc(50% - 2px);
+    }
+
+    div.four > .colored:nth-last-child(2), div.fifth > .colored:nth-last-child(2) {
+        width: 100%;
+    }
+
+}
+
+@media (min-device-width: 960px) and (max-device-width: 1199px) {
+    div.first > .colored, div.two > .colored {
+        float: left;
+        width: calc(50% - 2px);
+
+    }
+
+    div.three > .colored {
+        width: calc((100% / 3) - 2px);
+        float: left;
+    }
+    div.four>.colored{
+        width: calc(35% - 2px);
+        float: left;
+    }
+    div.four>.colored:nth-child(2){
+        width: calc(30% - 2px);
+
+    }
+    div.fifth>.colored:nth-last-child(2){
+        width: 100%;
+
+    }
+    div.fifth>.colored{
+        width: calc((100% / 4) - 2px);
+        float: left;
+    }
+}
+@media (min-device-width: 960px) and (max-device-width: 1799px) {
+    div.four>.colored{
+        width: calc(35% - 2px);
+        float: left;
+    }
+    div.four>.colored:nth-child(2){
+        width: calc(30% - 2px);
+
+    }
+}
+@media (min-device-width: 1200px) and (max-device-width: 1799px) {
+    div.first > .colored, div.two > .colored {
+        float: left;
+        width: calc(50% - 2px);
+
+    }
+    div.three > .colored {
+        width: calc((100% / 2) - 2px);
+        float: left;
+    }
+    div.three > .colored:nth-last-child(2) {
+        width: 100%;
+    }
+    div.fifth>.colored:nth-last-child(2),div.fifth>.colored:nth-last-child(3){
+        width: calc((100% / 2) - 2px);
+        float: left;
+    }
+    div.fifth>.colored{
+        width: calc((100% / 3) - 2px);
+        float: left;
+    }
+}
+@media (min-device-width: 1800px) {
+    div.first > .colored {
+        float: left;
+        width: calc((100% /4) - 2px);
+
+    }
+    div.two > .colored {
+        float: left;
+        width: calc(50% - 2px);
+
+    }
+    div.three > .colored {
+        width: calc(25% - 2px);
+        float: left;
+    }
+    div.three > .colored:nth-child(2){
+        width: calc(50% - 2px);
+    }
+    div.four>.colored{
+        width: calc(25% - 2px);
+        float: left;
+    }
+    div.four>.colored:nth-last-child(2){
+        width: calc(50% - 2px);
+        float: left;
+    }
+    div.fifth>.colored{
+        width: calc((100% / 5) - 2px);
+        float: left;
+    }
+}

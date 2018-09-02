@@ -146,8 +146,8 @@
         width: calc(25% - 2px);
         float: left;
     }
-    div.three > .colored:nth-child(2){
-        width: calc(50% - 2px);
+    div.three > .colored:first-child{
+        margin-left: calc((25% / 2) - 2px);
     }
     div.four>.colored{
         width: calc(25% - 2px);

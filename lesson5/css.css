@@ -95,7 +95,7 @@
 
     }
     div.fifth>.colored{
-        width: calc((100% / 4) - 2px);
+        width: calc((100% / 2) - 2px);
         float: left;
     }
 }

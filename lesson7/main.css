@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.row {
+    position: relative;
+}
+
+.clear:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+.button {
+    float: left;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+.content{
+    top:50px;
+    left: 0;
+    height: 350px;
+    width: 100%;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    position: absolute;
+}
+.active{
+    z-index: 100;
+    border-top: 2px solid blue;
+}
+
+.button:hover{
+    border-top: 2px solid blue;
+}
+.button:hover .content{
+    z-index: 100;
+    background-color: red;
+}

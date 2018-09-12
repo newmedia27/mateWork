@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > img {
+    height: 50%;
+    width: 50%;
+    animation: heart 0.8s ease-in-out infinite;
+}
+
+@keyframes heart {
+    0% {
+        height: 40%;
+        width: 40%;
+    }
+    25%{
+        height: 50%;
+        width: 50%;
+    }
+    50%{
+        height: 45%;
+        width: 45%;
+    }
+    80%{
+        height: 50%;
+        width: 50%;
+    }
+}

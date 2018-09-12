@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: inline-block;
+    transform-origin: 0 0;
+}
+
+.item2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    display: inline-block;
+    transform-origin: 100% 0;
+}
+
+@keyframes bord-l {
+    100% {
+        top: -2px;
+        transform: rotate(-90deg);
+
+    }
+}
+
+@keyframes bord-r {
+    100% {
+        top: -2px;
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes circled {
+
+    20% {
+        top: -5px;
+    }40% {
+        top: -10px;
+    }60% {
+        top: -20px;
+    }100% {
+        top: -50px;
+    }
+
+}
+
+.circled {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-color: red;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.blue-box {
+    background-color: blue;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+.box:hover > .item {
+    animation: bord-l 6s;}
+
+.box:hover > .item2 {
+    animation: bord-r 6s;
+}
+
+.box:hover > .circled {
+    animation: circled 6s;
+}

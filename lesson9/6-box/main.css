@@ -40,36 +40,6 @@
     display: inline-block;
     transform-origin: 100% 0;
 }
-
-@keyframes bord-l {
-    100% {
-        top: -2px;
-        transform: rotate(-90deg);
-
-    }
-}
-
-@keyframes bord-r {
-    100% {
-        top: -2px;
-        transform: rotate(90deg);
-    }
-}
-
-@keyframes circled {
-
-    20% {
-        top: -5px;
-    }40% {
-        top: -10px;
-    }60% {
-        top: -20px;
-    }100% {
-        top: -50px;
-    }
-
-}
-
 .circled {
     position: absolute;
     top: 0;
@@ -90,12 +60,18 @@
 }
 
 .box:hover > .item {
-    animation: bord-l 6s;}
+    top: -2px;
+    transform: rotate(-90deg);
+    transition: all 2s;
+}
 
 .box:hover > .item2 {
-    animation: bord-r 6s;
+    top: -2px;
+    transform: rotate(90deg);
+    transition: all 2s;
 }
 
 .box:hover > .circled {
-    animation: circled 6s;
+    top: -50px;
+    transition: all 2s 1s;
 }

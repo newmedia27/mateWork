@@ -70,10 +70,14 @@ form > input {
     background: none;
     color: white;
     font-size: 2rem;
+    box-sizing: border-box;
+    padding-left: 26px;
+
 }
 
 form {
-    text-align: center;
+
+    position: relative;
 }
 button {
     font-size: 2rem;
@@ -102,15 +106,13 @@ p>a:hover{
     text-decoration: underline;
 }
 i.fa {
-    width: 30px;
-    height: 30px;
-    line-height: 3;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
     text-align: center;
-    margin-right: -30px;
+    margin-right: -26px;
     position: relative;
     z-index: 1;
-    float: left;
+    top: 26px;
 }
-i.fa + input {
-    padding-left: 30px;
-}
+

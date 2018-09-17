@@ -55,6 +55,7 @@
     color: blue;
     position: absolute;
 font-size: 25px;
+    z-index: 2;
 }
 .button-1{
     top: 100px;

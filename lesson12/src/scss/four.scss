@@ -1,0 +1,22 @@
+.tasks__wrapper--two {
+  background-color: orange;
+  margin-top: 20px;
+   .tasks {
+
+     &__list {
+       display: flex;
+
+     }
+     &__item{
+       width: calc(100% / 3);
+       @extend %styleItem;
+       &-remove{
+         @extend %remove;
+         &:hover{
+           @extend %removeHover;
+         }
+       }
+     }
+   }
+
+ }

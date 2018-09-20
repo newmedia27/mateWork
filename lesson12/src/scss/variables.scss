@@ -1,0 +1,30 @@
+$backColor: #ffcccc;
+$buttonBackColor: #2a602d;
+$buttonBackActiveColor: #334432;
+$mainSize: 14px;
+$fontFamily: "Helvetica";
+$textColor: #333;
+$countBlocks: 5;
+
+%styleItem {
+  list-style: none;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid white;
+  padding: 0 5px ;
+}
+%remove{
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin-right: 10px;
+  display: inline-block;
+
+}
+%removeHover{
+
+    background-color: red;
+    border-radius: 50%;
+    transition: all 1s;
+
+}

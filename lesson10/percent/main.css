@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 10px;
+    line-height: 1;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    font-family: "sans-serif";
+
+}
+
+.wrapper {
+    margin: 5px;
+    width: calc(100% / 3 - 10px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 50%;
+}
+
+.wrapper > svg {
+    width: 90%;
+    height: 50%;
+    box-sizing: border-box;
+    transform: rotate(-90deg);
+}
+
+.percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+}
+
+.border--percent {
+    stroke-dasharray: 0 225;
+}
+
+svg:hover > .first {
+    animation: first 2s forwards;
+}
+
+svg:hover > .second {
+    animation: second 2s forwards;
+}
+
+svg:hover > .third {
+    animation: third 2s forwards;
+}
+
+@keyframes first {
+    from {
+        stroke-dasharray: 0 225;
+    }
+    to {
+        stroke-dasharray: 67.5 225;
+    }
+}@keyframes second {
+    from {
+        stroke-dasharray: 0 225;
+    }
+    to {
+        stroke-dasharray: 135 225;
+    }
+}@keyframes third {
+    from {
+        stroke-dasharray: 0 225;
+    }
+    to {
+        stroke-dasharray: 202.5 225;
+    }
+}

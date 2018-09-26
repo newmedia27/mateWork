@@ -1,42 +1,50 @@
-const
-    gulp = require('gulp'),
-    nunjucksRender = require('gulp-nunjucks-render');
-sass = require('gulp-sass');
-browserSync = require('browser-sync').create();
-cleanCSS = require('gulp-clean-css');
-
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const browserSync = require('browser-sync').create();
+const gcmq = require('gulp-group-css-media-queries');
+const rigger = require('gulp-rigger');
 
 gulp.task('sass', function () {
-    gulp.src('./src/**/main.scss')
+    gulp.src('./src/app/scss/**/main.scss')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./src/app/css'))
         .pipe(browserSync.reload({
             stream: true
         }));
 });
-gulp.task('browserSync', function () {
+gulp.task('dist', function () {
+    gulp.src('./src/app/css/**/*.css')
+        .pipe(gcmq())
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('./dist/css'));
+    gulp.src('./src/app/index.html')
+        .pipe(gulp.dest('./dist/'));
+});
+gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./src/app"
         }
     });
 });
-const htmlMain = gulp.task('html', () =>
-    gulp.src("./src/core/index.html")
-        .pipe(nunjucksRender())
-        .pipe(gulp.dest("./dist"))
-);
-gulp.task('sass', function () {
-    return gulp.src('./src/core/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'));
+
+gulp.task('rigger',function () {
+    gulp.src("./src/taskList/*.html")
+        .pipe(rigger())
+        .pipe(gulp.dest('./src/app'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+
 });
-gulp.task('default', ['browserSync', 'sass', 'html'], function () {
+gulp.task('default',['browserSync','sass','rigger'], function () {
     gulp.watch('./src/**/*.scss', ['sass']);
-    gulp.watch("./src/**/*.html", ['html']);
-    gulp.watch("./src/*.html").on('change', browserSync.reload);
+    gulp.watch("./src/app/*.html",).on('change', browserSync.reload);
+    gulp.watch("./src/**/*.html",["rigger"]);
 });

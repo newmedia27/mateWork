@@ -1,4 +1,0 @@
-$baseSize:16;
-@mixin fontSize($size : 14){
-  font-size: ($size / $baseSize) + 'rem';
-}

@@ -1,0 +1,1 @@
+Переделал немного структуру, вместо gulp-nunjucks-render использовал gulp-rigger

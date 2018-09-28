@@ -3,52 +3,52 @@
   margin: 0;
   line-height: 1;
 }
-
+.wrapper{
+  background-color: #f4f0f0;
+  padding: 50px;
+  box-sizing: border-box;
+}
 .container {
-  max-width: 500px;
-  height: 500px;
+  width: 251px;
   position: relative;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: #f4f0f0;
+
 }
 
 .paper {
   position: absolute;
-  top: 50%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
   background-color: #f8f5f5;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
+  height: 20px;
 }
 
 .first {
   position: relative;
-  width: 251px;
-  height: 241px;
+  width: 100%;
+  height: auto;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35), inset 0 1px 0 #dfdcdc;
   z-index: 4;
 }
 
 .second {
-  top: calc(50% + 3px);
-  width: 247px;
-  height: 242px;
+  bottom:-3px;
+  width: calc(100% - 4px);
   z-index: 3;
 }
 
 .third {
-  top: calc(50% + 5px);
-  width: 244px;
-  height: 241px;
+  bottom:-5px;
+  width: calc(100% - 8px);
   z-index: 2;
 }
 
 .fourth {
-  top: calc(50% + 7px);
-  width: 242px;
-  height: 241px;
+  bottom:-7px;
+  width: calc(100% - 10px);
   background-color: #ececec;
 }
 

@@ -3,11 +3,13 @@
   margin: 0;
   line-height: 1;
 }
-.wrapper{
+
+.wrapper {
   background-color: #f4f0f0;
   padding: 50px;
   box-sizing: border-box;
 }
+
 .container {
   width: 251px;
   position: relative;
@@ -35,19 +37,19 @@
 }
 
 .second {
-  bottom:-3px;
+  bottom: -3px;
   width: calc(100% - 4px);
   z-index: 3;
 }
 
 .third {
-  bottom:-5px;
+  bottom: -5px;
   width: calc(100% - 8px);
   z-index: 2;
 }
 
 .fourth {
-  bottom:-7px;
+  bottom: -7px;
   width: calc(100% - 10px);
   background-color: #ececec;
 }
@@ -85,7 +87,6 @@
       &:checked + .cast > i {
         display: block;
       }
-
     }
     .cast {
       width: 14px;
@@ -191,40 +192,45 @@
       &:hover {
         background-color: #f1f0f0;
       }
-      &:first-child{
+      &:first-child {
         padding-right: 7px;
         padding-left: 0;
       }
-      .circle{
+      .circle {
         width: 12px;
         height: 12px;
         background-color: #a1a3a8;
-        border-radius:50%;
+        border-radius: 50%;
         display: inline-block;
         margin-left: 6px;
         position: relative;
-        &:first-child{
+        &:first-child {
           margin-right: 6px;
         }
       }
-      .left{
-        div{
-          border: 3px solid transparent; border-left: 6px solid #ffffff;
+      .left {
+        div {
+          border: 3px solid transparent;
+          border-left: 6px solid #ffffff;
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-20%,-50%);
+          transform: translate(-20%, -50%);
         }
       }
-      .right{
-        div{
-          border: 3px solid transparent; border-right: 6px solid #ffffff;
+      .right {
+        div {
+          border: 3px solid transparent;
+          border-right: 6px solid #ffffff;
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-80%,-50%);
+          transform: translate(-80%, -50%);
         }
       }
     }
   }
+}
+.checked{
+  text-decoration: line-through;
 }

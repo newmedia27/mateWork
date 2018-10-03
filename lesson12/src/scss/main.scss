@@ -36,12 +36,12 @@ body {
   .tasks {
     &__item {
       @extend %styleItem;
-      &-text{
+      &-text {
         color: $textColor;
       }
-      &-remove{
+      &-remove {
         @extend %remove;
-        &:hover{
+        &:hover {
           @extend %removeHover;
 
         }
@@ -50,3 +50,137 @@ body {
 
   }
 }
+
+.rules {
+  margin-top: 20px;
+  padding: 5px;
+  margin-bottom: 50px;
+  @for $i from 1 to 7 {
+    .item:nth-child(#{$i}) {
+      @include item($i)
+    }
+
+  }
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  .item {
+    width: 40%;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 2px 2px gray;
+    @each $name, $value in $messengerBgc {
+
+      &:nth-child(#{$name}) {
+        background-color: $value;
+        text-transform: capitalize;
+        color: map_get($messengerColor, all);
+        i {
+          font-size: 50px;
+        }
+        p {
+          margin-top: 5px;
+        }
+
+      }
+      &:last-child {
+        p {
+          color: map_get($messengerColor, default);
+        }
+
+        color: map_get($messengerColor, defaultTitle);
+
+      }
+    }
+
+    i {
+      margin-left: 5px;
+      margin-right: 20px;
+    }
+    &:hover {
+      box-shadow: 0 2px 16px black;
+      transition: all 1s;
+    }
+
+  }
+  &__seven {
+    background-color: gray;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 25px;
+    .stair {
+      width: $sevenWidth;
+      height: 50px;
+      border-top: red 3px solid;
+      border-right: 3px solid red;
+
+      @for $i from 1 to 11 {
+        &:nth-child(#{$i}) {
+          margin-left: $sevenWidth * ($i - 1);
+        }
+      }
+    }
+  }
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  tr {
+    height: 20px;
+    @for $i from 1 to 16 {
+
+      &:nth-child(#{$i}) {
+        background-color: blue;
+        @if $i % 2 == 0 {
+          background-color: yellow;
+        }
+        @if $i % 5 == 0 {
+          background-color: black;
+        }
+        @if $i % 8 == 0 {
+          background-color: green;
+        }
+      }
+    }
+
+  }
+}
+
+.container9 {
+  width: 80%;
+  margin: 50px auto 0;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 100px;
+  .btn {
+
+    @for $i from 1 to 6 {
+      &:nth-child(#{$i}) {
+        width: map_get($buttonSize,small);
+        background-color:map_get($messengerBgc,$i);
+        @if $i == 3 {
+          width: map_get($buttonSize,big);
+        }
+        @if $i % 2 == 0{
+          width: map_get($buttonSize, medium);
+        }
+      }
+    }
+  }
+}
+
+
+
+

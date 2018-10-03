@@ -21,7 +21,9 @@ gulp.task('dist', function () {
     gulp.src('./src/css/**/*.css')
         .pipe(gcmq())
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist/css'));
+    gulp.src('./src/index.html')
+        .pipe(gulp.dest('./dist/'));
 });
 gulp.task('browserSync', function() {
     browserSync.init({

@@ -168,15 +168,19 @@ table {
 
     @for $i from 1 to 16 {
       &:nth-child(#{$i}) {
+        margin-left: 10px;
         width: map_get($buttonSize,small);
+        height: map_get($buttonSize,small);
         background-color:map_get($messengerBgc,$i);
         @if $i > 5{
           background-color:map_get($messengerBgc,($i - 5));
           width: map_get($buttonSize, medium);
+          height: map_get($buttonSize, medium);
 
         } @if $i > 10{
           background-color:map_get($messengerBgc,($i - 10));
         width: map_get($buttonSize,big);
+        height: map_get($buttonSize,big);
         }
       }
     }

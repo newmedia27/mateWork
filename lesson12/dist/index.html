@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+<button class="button">send</button>
+
+
+<div class="tasks__wrapper">
+    <ul class="tasks__list">
+        <li class="tasks__item">
+            <span class="tasks__item-remove"></span>
+            <span class="tasks__item-text">First task</span>
+        </li>
+        <li class="tasks__item">
+            <span class="tasks__item-remove"></span>
+            <span class="tasks__item-text">Second task</span>
+        </li>
+        <li class="tasks__item">
+            <span class="tasks__item-remove"></span>
+            <span class="tasks__item-text">Third task</span>
+        </li>
+    </ul>
+</div>
+<!--4-->
+<div class="tasks__wrapper--two">
+    <ul class="tasks__list">
+        <li class="tasks__item">
+            <span class="tasks__item-remove"></span>
+            <span class="tasks__item-text">First task</span>
+        </li>
+        <li class="tasks__item">
+            <span class="tasks__item-remove"></span>
+            <span class="tasks__item-text">Second task</span>
+        </li>
+        <li class="tasks__item">
+            <span class="tasks__item-remove"></span>
+            <span class="tasks__item-text">Third task</span>
+        </li>
+    </ul>
+</div>
+
+<!--Create a sass mixin for styling next HTML, rules for styling are: "every next .rules__item should have font-size bigger then previous on 1px, and it should have randow color"-->
+
+
+<div class="rules">
+    <div class="rules__item">1 rule</div>
+    <div class="rules__item">2 rule</div>
+    <div class="rules__item">3 rule</div>
+    <div class="rules__item">4 rule</div>
+    <div class="rules__item">5 rule</div>
+    <div class="rules__item">6 rule</div>
+</div>
+
+
+<!--Create messenger as this one https://raw.githubusercontent.com/FLCreative/ng2-toastr/HEAD/toastr-examples.jpg?raw=true
+ with 5 styles (success, error, info, warning and default) using SASS maps
+  and @each directives. Every style has it's own styles for background,
+   color, text-color, icon status-->
+
+
+<div class="container">
+
+    <div class="item success"><i class="fas fa-check"></i>
+        <div class="text">green <p>some text</p></div>
+    </div>
+    <div class="item info"><i class="fas fa-info-circle"></i>
+        <div class="text">blue <p>some text</p></div>
+    </div>
+    <div class="item warning"><i class="fas fa-exclamation-triangle"></i>
+        <div class="text">orange <p>some text</p></div>
+    </div>
+    <div class="item error"><i class="fas fa-exclamation-circle"></i>
+        <div class="text">red <p>some text</p></div>
+    </div>
+    <div class="item default">
+        <div class="text">default<p>some text</p></div>
+    </div>
+
+</div>
+
+<!--Using @for directive in SASS create a document with 20 stairs-->
+<!--(eg: https://maxcdn.icons8.com/Share/google/s/stairs.png),-->
+<!--where every stair bigger on 15px then previous one-->
+
+<div class="container__seven">
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+    <div class="stair"></div>
+</div>
+
+
+    <!--Using SASS cycles (while or for) create a table with 15 rows,-->
+    <!--where every odd row will be blue, every even yellow,-->
+    <!--every 5 row: black and every 8 block - green.-->
+    
+    
+    <table border="1"cellpadding="0" cellspacing="0">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+<!--Create buttons using Mapping and cycles (for or while) in SASS with 5-->
+<!--types: "success, warning, info, -->
+<!--default and error" and each with different sizes: "small, middle and big"-->
+
+<div class="container9">
+<button class="btn">success</button>
+<button class="btn">info</button>
+<button class="btn">warning</button>
+<button class="btn">error</button>
+<button class="btn">default</button>
+</div>
+</body>
+</html>

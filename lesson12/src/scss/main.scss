@@ -56,8 +56,8 @@ body {
   padding: 5px;
   margin-bottom: 50px;
   @for $i from 1 to 7 {
-    .item:nth-child(#{$i}) {
-      @include item($i)
+    &__item:nth-child(#{$i}) {
+      @include item($i);
     }
 
   }
@@ -166,15 +166,17 @@ table {
   padding-bottom: 100px;
   .btn {
 
-    @for $i from 1 to 6 {
+    @for $i from 1 to 16 {
       &:nth-child(#{$i}) {
         width: map_get($buttonSize,small);
         background-color:map_get($messengerBgc,$i);
-        @if $i == 3 {
-          width: map_get($buttonSize,big);
-        }
-        @if $i % 2 == 0{
+        @if $i > 5{
+          background-color:map_get($messengerBgc,($i - 5));
           width: map_get($buttonSize, medium);
+
+        } @if $i > 10{
+          background-color:map_get($messengerBgc,($i - 10));
+        width: map_get($buttonSize,big);
         }
       }
     }

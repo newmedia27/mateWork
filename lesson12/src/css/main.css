@@ -57,24 +57,24 @@ body {
   margin-top: 20px;
   padding: 5px;
   margin-bottom: 50px; }
-  .rules .item:nth-child(1) {
+  .rules__item:nth-child(1) {
     font-size: 15px;
-    color: #3e533d; }
-  .rules .item:nth-child(2) {
-    font-size: 16px;
     color: #496148; }
-  .rules .item:nth-child(3) {
-    font-size: 17px;
-    color: #547052; }
-  .rules .item:nth-child(4) {
-    font-size: 18px;
+  .rules__item:nth-child(2) {
+    font-size: 16px;
     color: #5f7f5d; }
-  .rules .item:nth-child(5) {
-    font-size: 19px;
-    color: #6a8d68; }
-  .rules .item:nth-child(6) {
-    font-size: 20px;
+  .rules__item:nth-child(3) {
+    font-size: 17px;
     color: #779a75; }
+  .rules__item:nth-child(4) {
+    font-size: 18px;
+    color: #94af93; }
+  .rules__item:nth-child(5) {
+    font-size: 19px;
+    color: #b1c5b0; }
+  .rules__item:nth-child(6) {
+    font-size: 20px;
+    color: #cedbcd; }
 
 .container {
   width: 50%;
@@ -261,16 +261,58 @@ table {
     background-color: green; }
   .container9 .btn:nth-child(2) {
     width: 50px;
-    background-color: blue;
-    width: 75px; }
+    background-color: blue; }
   .container9 .btn:nth-child(3) {
     width: 50px;
-    background-color: orange;
-    width: 100px; }
+    background-color: orange; }
   .container9 .btn:nth-child(4) {
     width: 50px;
-    background-color: red;
-    width: 75px; }
+    background-color: red; }
   .container9 .btn:nth-child(5) {
     width: 50px;
     background-color: white; }
+  .container9 .btn:nth-child(6) {
+    width: 50px;
+    background-color: green;
+    width: 75px; }
+  .container9 .btn:nth-child(7) {
+    width: 50px;
+    background-color: blue;
+    width: 75px; }
+  .container9 .btn:nth-child(8) {
+    width: 50px;
+    background-color: orange;
+    width: 75px; }
+  .container9 .btn:nth-child(9) {
+    width: 50px;
+    background-color: red;
+    width: 75px; }
+  .container9 .btn:nth-child(10) {
+    width: 50px;
+    background-color: white;
+    width: 75px; }
+  .container9 .btn:nth-child(11) {
+    width: 50px;
+    width: 75px;
+    background-color: green;
+    width: 100px; }
+  .container9 .btn:nth-child(12) {
+    width: 50px;
+    width: 75px;
+    background-color: blue;
+    width: 100px; }
+  .container9 .btn:nth-child(13) {
+    width: 50px;
+    width: 75px;
+    background-color: orange;
+    width: 100px; }
+  .container9 .btn:nth-child(14) {
+    width: 50px;
+    width: 75px;
+    background-color: red;
+    width: 100px; }
+  .container9 .btn:nth-child(15) {
+    width: 50px;
+    width: 75px;
+    background-color: white;
+    width: 100px; }

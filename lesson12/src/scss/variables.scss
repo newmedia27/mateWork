@@ -33,7 +33,7 @@ $countBlocks: 5;
 
 @mixin item($i) {
   font-size: $mainSize + $i;
-  color: lighten($buttonBackActiveColor, ($i * 5%));
+  color: lighten($buttonBackActiveColor, ($i * 10%));
 }
 
 $messengerBgc: (

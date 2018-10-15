@@ -1,0 +1,23 @@
+{
+  "name": "loginform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sviatoslav <newmedia27@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-cli": "^2.0.1"
+  }
+}
